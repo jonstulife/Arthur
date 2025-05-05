@@ -27,14 +27,14 @@
     }
 
     video {
-      transform: scale(1.0); /* Zoom de 100% */
+      transform: scale(0.0); /* Zoom de 100% */
       transform-origin: center center;
       background: transparent;
     }
 
     @media (max-width: 768px) {
       video {
-        transform: scale(2); /* Mais zoom em celulares */
+        transform: scale(1); /* Mais zoom em celulares */
       }
     }
   </style>
@@ -43,8 +43,6 @@
   <div class="video-container">
     <video autoplay loop muted playsinline>
       <source src="banner.mp4" type="video/mp4">
-      Seu navegador não suporta vídeo HTML5.
-    </video>
       Seu navegador não suporta vídeo HTML5.
     </video>
   </div>
