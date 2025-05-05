@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Vídeos em Background</title>
+  <title>Vídeos em Zoom</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background: transparent;
+      background: black;
       overflow: hidden;
       height: 100%;
     }
 
     .video-container {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -24,9 +27,15 @@
     }
 
     video {
-      max-width: 90%;
-      max-height: 45%;
+      transform: scale(1.5); /* Zoom de 150% */
+      transform-origin: center center;
       background: transparent;
+    }
+
+    @media (max-width: 768px) {
+      video {
+        transform: scale(2); /* Mais zoom em celulares */
+      }
     }
   </style>
 </head>
